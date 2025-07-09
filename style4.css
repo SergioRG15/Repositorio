@@ -1,0 +1,91 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #7cbbf1, #70979c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, rgb(94, 64, 199), rgb(35, 35, 230));
+  padding: 10px 30px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  border-radius: 50%;
+}
+
+.botones2 button {
+  padding: 10px 20px;
+  background-color: #72d2f0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.botones2 button:hover {
+  background-color: #1E3A8A;
+}
+
+.contenedor {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  align-items: center;
+  background-color: whitesmoke;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: black 0px 0px 10px;
+}
+
+h1 {
+  color: rgb(94, 64, 199);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #72d2f0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border: 1px solid #ddd;
+}

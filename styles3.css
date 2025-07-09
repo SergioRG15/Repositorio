@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cce2f8;
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    margin: 0;
+    text-align: center;
+    flex-direction: column; /* Los elementos se apilarán verticalmente */
+}
+
+.titulo {
+    background-color: #ff9e9e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #1E3A8A;
+    text-align: center;
+    margin-bottom: 100px; /* Añadido espacio entre el título y la calculadora */
+    font-weight: bold;
+}
+
+.titulo_principal {
+    background-color: #c3ddfa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #1E3A8A;
+}
+
+.Calculadora {
+    font-style: italic;
+    background-color: #8bbdf7;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: justify;
+    margin: 0; /* Elimina márgenes para centrar mejor */
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    display: block;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #1E3A8A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2C5282;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.category {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 340px;
+  padding: 2.5rem 3rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #4e54c8;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-top: 0.35rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  transition: border 0.2s ease;
+}
+
+input:focus {
+  border-color: #4e54c8;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #4e54c8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #4348b3;
+}
+
+#forgotLink {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4e54c8;
+  text-decoration: none;
+}
+
+#forgotLink:hover {
+  text-decoration: underline;
+}
+
+#message {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #c0392b;
+}

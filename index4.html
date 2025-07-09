@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Recomendaciones Médicas</title>
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+  </header>
+  <main class="contenedor">
+    <h1>Asistente de Recomendaciones Médicas</h1>
+
+    <form id="healthForm">
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" required>
+
+      <label for="condicion">Condición médica principal:</label>
+      <select id="condicion" required>
+        <option value="diabetes">Diabetes</option>
+        <option value="hipertension">Hipertensión</option>
+        <option value="obesidad">Obesidad</option>
+        <option value="ninguna">Ninguna</option>
+      </select>
+
+      <button type="submit">Generar recomendaciones</button>
+    </form>
+
+    <div class="result" id="result" style="display: none;"></div>
+  </main>
+  <script src="script4.js"></script>
+</body>
+</html>

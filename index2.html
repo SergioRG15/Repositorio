@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario de Datos Personales</title>
+  <style>
+   /* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: rgba(10, 87, 194, 0.644); /* azul muy claro */
+  color: #234a7a; /* azul oscuro para el texto */
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #1b355f; /* azul oscuro */
+}
+
+form#profileForm {
+  background: #ffffff; /* blanco puro */
+  max-width: 480px;
+  width: 100%;
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(35, 74, 122, 0.2); /* sombra azul suave */
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form#profileForm:hover {
+  box-shadow: 0 15px 35px rgba(35, 74, 122, 0.35);
+}
+
+label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #3a5f94; /* azul medio */
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid #0e57d6; /* borde azul claro */
+  border-radius: 12px;
+  font-family: inherit;
+  color: #234a7a;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #1e4ed1; /* azul vivo para foco */
+  outline: none;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
+
+button[type="submit"] {
+  background-color: #4a90e2; /* azul botón */
+  color: #fff;
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #357abd;
+  box-shadow: 0 10px 25px rgba(53, 122, 189, 0.7);
+}
+
+.profile-data {
+  background: #ffffff; /* blanco puro */
+  max-width: 480px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(35, 74, 122, 0.15);
+  color: #1b355f;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.profile-data h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-data p {
+  margin-bottom: 12px;
+}
+
+.profile-data strong {
+  color: #3a5f94;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  body {
+    padding: 25px 15px;
+  }
+  form#profileForm,
+  .profile-data {
+    padding: 20px 20px;
+    border-radius: 15px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>Formulario de Datos Personales</h1>
+  <form id="profileForm">
+    <label for="name">Nombre completo:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="dob">Fecha de nacimiento:</label>
+    <input type="date" id="dob" name="dob" required />
+
+    <label for="age">Edad:</label>
+    <input type="number" id="age" name="age" min="0" max="120" required />
+
+    <label for="gender">Sexo:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Selecciona...</option>
+      <option value="Masculino">Masculino</option>
+      <option value="Femenino">Femenino</option>
+      <option value="Otro">Otro</option>
+    </select>
+
+    <label for="phone">Teléfono:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9\s\-]+" placeholder="Ej: 123-456-7890" />
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
+
+    <label for="address">Dirección:</label>
+    <textarea id="address" name="address" rows="2"></textarea>
+
+    <label for="allergies">Alergias o condiciones médicas:</label>
+    <textarea id="allergies" name="allergies" rows="3" placeholder="Describe aquí"></textarea>
+
+    <label for="bloodType">Tipo de sangre:</label>
+    <select id="bloodType" name="bloodType" required>
+      <option value="">Selecciona...</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+    </select>
+
+    <button type="submit">Guardar Datos</button>
+  </form>
+
+  <div class="profile-data" id="profileDisplay" style="display:none;">
+    <h2>Datos Guardados</h2>
+    <p><strong>Nombre:</strong> <span id="dispName"></span></p>
+    <p><strong>Fecha de nacimiento:</strong> <span id="dispDob"></span></p>
+    <p><strong>Edad:</strong> <span id="dispAge"></span></p>
+    <p><strong>Sexo:</strong> <span id="dispGender"></span></p>
+    <p><strong>Teléfono:</strong> <span id="dispPhone"></span></p>
+    <p><strong>Correo electrónico:</strong> <span id="dispEmail"></span></p>
+    <p><strong>Dirección:</strong> <span id="dispAddress"></span></p>
+    <p><strong>Alergias / Condiciones:</strong> <span id="dispAllergies"></span></p>
+    <p><strong>Tipo de sangre:</strong> <span id="dispBloodType"></span></p>
+  </div>
+
+  <script>
+    document.getElementById('profileForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const dob = document.getElementById('dob').value;
+      const age = document.getElementById('age').value.trim();
+      const gender = document.getElementById('gender').value;
+      const phone = document.getElementById('phone').value.trim() || 'No proporcionado';
+      const email = document.getElementById('email').value.trim();
+      const address = document.getElementById('address').value.trim() || 'No proporcionada';
+      const allergies = document.getElementById('allergies').value.trim() || 'Ninguna';
+      const bloodType = document.getElementById('bloodType').value;
+
+      if (dob) {
+        const birthDate = new Date(dob);
+        const today = new Date();
+        let calculatedAge = today.getFullYear() - birthDate.getFullYear();
+        const m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+          calculatedAge--;
+        }
+        if (calculatedAge != age) {
+          alert("La edad no coincide con la fecha de nacimiento. Por favor verifica.");
+          return;
+        }
+      }
+
+      document.getElementById('dispName').textContent = name;
+      document.getElementById('dispDob').textContent = dob;
+      document.getElementById('dispAge').textContent = age;
+      document.getElementById('dispGender').textContent = gender;
+      document.getElementById('dispPhone').textContent = phone;
+      document.getElementById('dispEmail').textContent = email;
+      document.getElementById('dispAddress').textContent = address;
+      document.getElementById('dispAllergies').textContent = allergies;
+      document.getElementById('dispBloodType').textContent = bloodType;
+
+      document.getElementById('profileDisplay').style.display = 'block';
+
+// Esperar 1 segundo y redirigir a la calculadora IMC
+setTimeout(function () {
+  window.location.href = "imc.html";
+}, 1000);
+      window.location.href = "imc.html";// Opcional limpiar formulario: this.reset();
+    });
+  </script>
+
+</body>
+</html>
